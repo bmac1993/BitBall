@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<title>Template</title>
+	<style type="text/css">
+	canvas{
+		border:1px solid gray;
+	}
+	#audioControls{ 
+			display:none; 
+	}
+	</style>
+	<script src="js/main.js"></script>
+	<script src="js/utilities.js"></script>
+	<script src="js/player.js"></script>
+	<script src="js/audio.js"></script>
+	<script src="js/collisions.js"></script>
+    <script src="js/ball.js"></script>
+    <script src="/socket.io/socket.io.js"></script> <!-- works if file is hosted by node, even in heroku or online -->
+</head>
+<body>
+
+    <img id="square" src="media/Square.png" width="150" style="position:relative; top:350px; left:275px" />
+    <img id="triangle" src="media/Triangle.png" width="150" style="position:relative; top:350px; left:275px" />
+    <img id="decagon" src="media/Decagon.png" width="150" style="position:relative; top:350px; left:275px" />
+    <img id="blue" src="media/BtnBlue.png" width="150" style="position:relative; top:750px; left:-175px" />
+    <img id="red" src="media/BtnRed.png" width="150" style="position:relative; top:750px; left:-175px" />
+    <img id="start" src="media/Start.png" width="150" style="position:relative; top:750px; left:-175px" />
+    <span id="err" style="font-size:30px; color:red;"></span>
+	<canvas width="900" height="420">
+		
+	</canvas>
+    <section id="audioControls"> 
+ <audio id="bgAudio" src="media/BackgroundMusic.mp3" controls loop></audio>
+ <audio id="effectAudio" src="media/bounce.wav" controls></audio> 
+</section>
+</body>
+</html>
