@@ -19,8 +19,8 @@
     var socket;
 
     // set up some initial values
-    var WIDTH = 800;
-    var HEIGHT = 400;
+    var WIDTH = 1000;
+    var HEIGHT = 500;
     var scale;
     	
     // we'll set the rest of these in the init function

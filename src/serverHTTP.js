@@ -1,5 +1,5 @@
-var WIDTH = 900;
-var HEIGHT = 460;
+var WIDTH = 1000;
+var HEIGHT = 500;
 
 var Ball = function (speed, xSpeed, ySpeed, x, y) {
     this.speed = speed;
