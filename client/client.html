@@ -22,13 +22,16 @@
     <script src="/socket.io/socket.io.js"></script> <!-- works if file is hosted by node, even in heroku or online -->
 </head>
 <body>
-
-    <img id="square" src="media/Square.png" width="150" style="position:relative; top:350px; left:275px" />
-    <img id="triangle" src="media/Triangle.png" width="150" style="position:relative; top:350px; left:275px" />
-    <img id="decagon" src="media/Decagon.png" width="150" style="position:relative; top:350px; left:275px" />
-    <img id="blue" src="media/BtnBlue.png" width="150" style="position:relative; top:750px; left:-175px" />
-    <img id="red" src="media/BtnRed.png" width="150" style="position:relative; top:750px; left:-175px" />
-    <img id="start" src="media/Start.png" width="150" style="position:relative; top:750px; left:-175px" />
+	<h1 style="position:absolute; top:20px; left:200px">Select a shape:</h1>
+	<h1 id="shapeValue" style="position:absolute; top:20px; left:430px"></h1>
+    <img id="square" src="media/Square.png" width="150" style="position:absolute; top:100px; left:200px" />
+    <img id="triangle" src="media/Triangle.png" width="150" style="position:absolute; top:100px; left:375px" />
+    <img id="decagon" src="media/Decagon.png" width="150" style="position:absolute; top:100px; left:550px" />
+	<h1 style="position:absolute; top:270px; left:200px">Select a team:</h1>
+	<h1 id="teamValue" style="position:absolute; top:270px; left:410px"></h1>
+    <img id="blue" src="media/BtnBlue.png" width="150" style="position:absolute; top:350px; left:200px" />
+    <img id="red" src="media/BtnRed.png" width="150" style="position:absolute; top:350px; left:375px" />
+    <img id="start" src="media/Start.png" width="150" style="position:absolute; top:350px; left:550px" />
     <span id="err" style="font-size:30px; color:red;"></span>
 	<canvas width="1000" height="500">
 		

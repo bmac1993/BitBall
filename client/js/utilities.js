@@ -128,18 +128,23 @@
 	{
 	    document.getElementById("square").addEventListener("click", function () {
 	        shape = "Square";
+			document.getElementById("shapeValue").innerHTML = "Square";
 	    });
 	    document.getElementById("triangle").addEventListener("click", function () {
 	        shape = "Triangle";
+			document.getElementById("shapeValue").innerHTML = "Triangle";
 	    });
 	    document.getElementById("decagon").addEventListener("click", function () {
 	        shape = "Decagon";
+			document.getElementById("shapeValue").innerHTML = "Decagon";
 	    });
 	    document.getElementById("blue").addEventListener("click", function () {
 	        team = "Blue";
+			document.getElementById("teamValue").innerHTML = "Blue";
 	    });
 	    document.getElementById("red").addEventListener("click", function () {
 	        team = "Red";
+			document.getElementById("teamValue").innerHTML = "Red";
 	    });
 	    document.getElementById("start").addEventListener("click", function () {
 	        if (shape != "" && team != "") {
