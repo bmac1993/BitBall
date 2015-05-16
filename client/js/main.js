@@ -4,7 +4,7 @@
     var GAME_STATE_SIGN_IN = 3;
 	var GAME_STATE_PLAYING = 1;
 	var GAME_STATE_END = 2;
-    var gameState = GAME_STATE_TEAM_SELECT;
+    var gameState = GAME_STATE_SIGN_IN;
 	var level = 0;
     var team1score = 0;
     var team2score = 0;
@@ -97,7 +97,7 @@
     function init() {
         console.log("init called");
         lastTime = 0;
-        gameState = GAME_STATE_TEAM_SELECT;
+        gameState = GAME_STATE_SIGN_IN;
         canvas = document.querySelector("canvas");
         ctx = canvas.getContext("2d");
 
