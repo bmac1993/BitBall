@@ -198,18 +198,6 @@
 		    ctx.font = "24px Arial";
 		    ctx.fillStyle = "#214356";
 		    ctx.textAlign = "left"
-		    
-		    ctx.fillText("Select your shape:   " + shape, WIDTH / 4 -100, HEIGHT / 5);
-
-		    //ctx.drawImage(btnSquare, WIDTH / 4 - 100, HEIGHT / 2 - HEIGHT / 4);
-		    //ctx.drawImage(btnTriangle, WIDTH / 2 - 100, HEIGHT / 2 - HEIGHT / 4);
-		    //ctx.drawImage(btnDecagon, WIDTH / 2 + WIDTH / 4 - 100, HEIGHT / 2 - HEIGHT / 4);
-
-		    ctx.fillText("Choose a team:   " + team, WIDTH / 4 - 100, HEIGHT / 2 + 50);
-		    //ctx.drawImage(btnRed, WIDTH / 4 - 100, HEIGHT / 2 +80);
-		    //ctx.drawImage(btnBlue, WIDTH / 2 - 100, HEIGHT / 2 + 80);
-		    //ctx.drawImage(btnGo, WIDTH / 2 + WIDTH / 4 - 100, HEIGHT / 2 + 80);
-
             
 		    if (winner != "") {
 		        ctx.font = "30px Arial";
