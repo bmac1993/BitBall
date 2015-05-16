@@ -4,7 +4,7 @@ var HEIGHT = 460;
 var Ball = function (speed, xSpeed, ySpeed, x, y) {
     this.speed = speed;
     this.xSpeed = xSpeed;
-    this.ySpeed = xSpeed;
+    this.ySpeed = ySpeed;
 
     this.x = x;
     this.y = y;
@@ -16,7 +16,6 @@ var Ball = function (speed, xSpeed, ySpeed, x, y) {
             if (this.xSpeed > 0) {
                 this.xSpeed = -this.xSpeed;
             }
-
         }
         if (this.x - this.radius < 0) {
             if (this.xSpeed < 0) {
@@ -218,7 +217,7 @@ var users = {};
 
 var players = [];
 
-var ball = new Ball(200, 200, 200, 0, 0);
+var ball = new Ball(150, 150, 150, 0, 0);
 
 var team1score = 0;
 var team2score = 0;

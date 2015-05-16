@@ -1,6 +1,7 @@
 "use strict";
 
 	var GAME_STATE_TEAM_SELECT = 0;
+    var GAME_STATE_SIGN_IN = 3;
 	var GAME_STATE_PLAYING = 1;
 	var GAME_STATE_END = 2;
     var gameState = GAME_STATE_TEAM_SELECT;
@@ -18,8 +19,8 @@
     var socket;
 
     // set up some initial values
-    var WIDTH = 900;
-    var HEIGHT = 460;
+    var WIDTH = 800;
+    var HEIGHT = 400;
     var scale;
     	
     // we'll set the rest of these in the init function
@@ -50,40 +51,6 @@
 	var btnGo;
 
     window.onload = init;
-
-    function resize() {
-        console.log("resize");
-        currentHeight = window.innerHeight;
-        // resize the width in proportion
-        // to the new height
-        currentWidth = currentHeight * RATIO;
-
-
-        // set the new canvas style width and height
-        // note: our canvas is still 320 x 480, but
-        // we're essentially scaling it with CSS
-        canvas.style.width =currentWidth + 'px';
-        canvas.style.height = currentHeight + 'px';
-
-        // this will create some extra space on the
-        // page, allowing us to scroll past
-        // the address bar, thus hiding it.
-        if (android || ios) {
-            document.body.style.height = (window.innerHeight + 50) + 'px';
-        }
-
-        // we use a timeout here because some mobile
-        // browsers don't fire if there is not
-        // a short delay
-        window.setTimeout(function () {
-            window.scrollTo(0, 1);
-        }, 10);
-
-        scale = currentWidth / WIDTH;
-        offset.top = canvas.offsetTop;
-        offset.left = canvas.offsetLeft;
-
-    }
 
     function setupSocket() {
 
@@ -155,16 +122,6 @@
         canvas.width = WIDTH;
         canvas.height = HEIGHT;
 
-        // we need to sniff out Android and iOS
-        // so that we can hide the address bar in
-        // our resize function
-        ua = navigator.userAgent.toLowerCase();
-        android = ua.indexOf('android') > -1 ? true : false;
-        ios = (ua.indexOf('iphone') > -1 || ua.indexOf('ipad') > -1 || ua.indexOf('ipod') > -1) ? true : false;
-
-        // we're ready to resize
-        resize();
-
 		localStorage.highscore = highscore;
 		
         runListeners();
@@ -176,29 +133,6 @@
 
         update();
     }
-
-    //function checkForCollisions() {
-    //    if(player.hitTimer <= 0){
-    //        for (var i = 0; i < ball.verticies.length; i++) {
-    //            var coords = ball.verticies[i];
-    //            if (isPointInPoly(player.verticies, coords)) {  // ball collided with a polygon
-    //                player.hitTimer = 3;
-    //                var lineVectors = getSideCollided(player.verticies, coords); // gets the verticies of the line the ball collided with
-
-    //                ball.updateSlope(lineVectors);
-
-    //                if (player.team == "Blue") {
-    //                    team1score++;
-    //                }
-    //                if (player.team == "Red") {
-    //                    team2score++;
-    //                }
-
-    //                break;
-    //            }
-    //        }
-    //    }
-    //}
 
     function reset() {
         bgAudio.play();
