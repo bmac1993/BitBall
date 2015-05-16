@@ -155,6 +155,10 @@
 	            document.getElementById("triangle").style.display = "none";
 	            document.getElementById("square").style.display = "none";
 	            document.getElementById("start").style.display = "none";
+				document.getElementById("shapeValue").style.display = "none";
+				document.getElementById("teamValue").style.display = "none";
+				document.getElementById("shapeText").style.display = "none";
+				document.getElementById("teamText").style.display = "none";
 	            gameState = GAME_STATE_PLAYING;
 	            reset();
 	        }
