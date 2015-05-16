@@ -126,6 +126,11 @@
 
 	function runListeners()
 	{
+		// Account creating and login listeners
+		document.getElementById("login").addEventListener("click", login.authenticate);
+		document.getElementById("createAcc").addEventListener("click", login.createAccount);
+
+		// Shape and Team select listeners
 	    document.getElementById("square").addEventListener("click", function () {
 	        shape = "Square";
 			document.getElementById("shapeValue").innerHTML = "Square";
@@ -148,17 +153,7 @@
 	    });
 	    document.getElementById("start").addEventListener("click", function () {
 	        if (shape != "" && team != "") {
-	            document.getElementById("err").style.display = "none";
-	            document.getElementById("red").style.display = "none";
-	            document.getElementById("blue").style.display = "none";
-	            document.getElementById("decagon").style.display = "none";
-	            document.getElementById("triangle").style.display = "none";
-	            document.getElementById("square").style.display = "none";
-	            document.getElementById("start").style.display = "none";
-				document.getElementById("shapeValue").style.display = "none";
-				document.getElementById("teamValue").style.display = "none";
-				document.getElementById("shapeText").style.display = "none";
-				document.getElementById("teamText").style.display = "none";
+	            $('.teamSelect').hide();
 	            gameState = GAME_STATE_PLAYING;
 	            reset();
 	        }
@@ -168,6 +163,7 @@
 	        
 	    });
 
+		// PLAYING listeners
 	    canvas.addEventListener("mousemove", function (e)
 		{
 			var x = e.clientX;

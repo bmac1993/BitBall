@@ -34,6 +34,7 @@
 	var dt = 0;
 	var elapsedTime = 0;
 
+    var user;
 	var ball;
 	var player;
 	var players = [];
@@ -186,14 +187,15 @@
 
     function drawHUD() 
 	{
+        if(gameState == GAME_STATE_SIGN_IN)
+        {
+            $('.login').show();
+            $('.teamSelect').hide();
+        }
 		if(gameState == GAME_STATE_TEAM_SELECT)
 		{
-		    document.getElementById("red").style.display = "";
-		    document.getElementById("blue").style.display = "";
-		    document.getElementById("decagon").style.display = "";
-		    document.getElementById("triangle").style.display = "";
-		    document.getElementById("square").style.display = "";
-		    document.getElementById("start").style.display = "";
+		    $('.teamSelect').show();
+            $('.login').hide();
 
 		    ctx.font = "24px Arial";
 		    ctx.fillStyle = "#214356";
