@@ -332,11 +332,21 @@ var onMsg = function(socket) {
 
     socket.on('login', function(data) {
 
+
         socket.emit('loginResult', data);
     });
 
     socket.on('createUser', function(data) {
-        socket.emit("createAccountResult", data);
+        var collection = db.collection('users');
+        collection.insertOne(data, function (err, result) {
+            if (err) {
+                socket.emit("createAccountResult", err);
+            } else {
+                socket.emit("createAccountResult", result);            
+            }
+            //Close connection
+            db.close();
+
 
     });
 };

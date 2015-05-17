@@ -4,7 +4,7 @@ var login = {
         var username = document.getElementById("username").value;
         var password = document.getElementById("password").value;
 
-        // query DB for username password combo
+        socket.emit('login', data);
 
         // if returns an object -> set user to returned object
 
@@ -30,7 +30,10 @@ var login = {
     },
     setupSockets: function(){
         socket.on('createAccountResult', function (data) {
-
+            alert(data);
+        });
+        socket.on('loginResult', function (data) {
+            alert(data);
         });
     }
 };
