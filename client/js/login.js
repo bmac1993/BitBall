@@ -19,15 +19,18 @@ var login = {
 
         if(password === password2)
         {
-            // add username + password to DB
+            var data = {'username':username, 'password':password};
+            socket.emit('createAccount', data);
             // return success message
         }
         else
         {
             // return passwords not matching message
         }
+    },
+    setupSockets: function(){
+        socket.on('createAccountResult', function (data) {
+
+        });
     }
-
-
-
 };

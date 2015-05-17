@@ -104,6 +104,7 @@
         //when the user clicks the connect button, fire the connectSocket function
         socket = io.connect();
         setupSocket();
+        login.setupSockets();
 
         socket.on('connect', function () {
             socket.emit('join');

@@ -74,6 +74,29 @@ var http = require('http'); //the http module will be stored as the variable htt
 var fs = require('fs'); //the file system module for file/folder functions stored as the variable fs
 //import the websocket library. There are many, but socket.io is one of the most common and feature rich
 var socketio = require('socket.io');
+//lets require/import the mongodb native drivers.
+var mongodb = require('mongodb');
+
+//We need to work with "MongoClient" interface in order to connect to a mongodb server.
+var MongoClient = mongodb.MongoClient;
+
+// Connection URL. This is where your mongodb server is running.
+var url = 'mongodb://localhost:27017/bitballdb';
+
+// Use connect method to connect to the Server
+MongoClient.connect(url, function (err, db) {
+    if (err) {
+        console.log('Unable to connect to the mongoDB server. Error:', err);
+    } else {
+        //HURRAY!! We are connected. :)
+        console.log('Connection established to', url);
+
+        // do some work here with the database.
+
+        //Close connection
+        db.close();
+    }
+});
 
 //port for the server to listen on. process.env.port and process.env.NODE_PORT are environment variables
 //that can be setup on a server (such as heroku) for non-hard-coded variables.
@@ -306,6 +329,16 @@ var onMsg = function(socket) {
 	    }
 	    players.push(data);
 	});
+
+    socket.on('login', function(data) {
+
+        socket.emit('loginResult', data);
+    });
+
+    socket.on('createUser', function(data) {
+        socket.emit("createAccountResult", data);
+
+    });
 };
 
 
