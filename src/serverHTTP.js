@@ -91,8 +91,6 @@ MongoClient.connect(url, function (err, db) {
         //HURRAY!! We are connected. :)
         console.log('Connection established to', url);
 
-        // do some work here with the database.
-
         //Close connection
         db.close();
     }
@@ -337,16 +335,24 @@ var onMsg = function(socket) {
     });
 
     socket.on('createUser', function(data) {
-        var collection = db.collection('users');
-        collection.insertOne(data, function (err, result) {
-            if (err) {
-                socket.emit("createAccountResult", err);
-            } else {
-                socket.emit("createAccountResult", result);            
-            }
-            //Close connection
-            db.close();
 
+        MongoClient.connect(url, function (err, db) {
+            if (err) {
+                console.log('Unable to connect to the mongoDB server. Error:', err);
+            } else {
+                var collection = db.collection('users');
+                collection.insertOne(data, function (err, result) {
+                    if (err) {
+                        socket.emit("createAccountResult", err);
+                    } else {
+                        socket.emit("createAccountResult", result);
+                    }
+                });
+
+                //Close connection
+                db.close();
+            }
+        });
 
     });
 };

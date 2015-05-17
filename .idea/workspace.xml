@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="085ed049-ee30-4939-b495-c7479a4c0e1a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/js/login.js" afterPath="$PROJECT_DIR$/client/js/login.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/serverHTTP.js" afterPath="$PROJECT_DIR$/src/serverHTTP.js" />
     </list>
     <ignored path="BitBall.iws" />
@@ -27,8 +26,8 @@
       <file leaf-file-name="serverHTTP.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/serverHTTP.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.71530247">
-              <caret line="344" column="60" selection-start-line="344" selection-start-column="60" selection-end-line="344" selection-end-column="60" />
+            <state vertical-scroll-proportion="0.46619216">
+              <caret line="338" column="8" selection-start-line="338" selection-start-column="8" selection-end-line="338" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -395,8 +394,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/serverHTTP.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71530247">
-          <caret line="344" column="60" selection-start-line="344" selection-start-column="60" selection-end-line="344" selection-end-column="60" />
+        <state vertical-scroll-proportion="0.46619216">
+          <caret line="338" column="8" selection-start-line="338" selection-start-column="8" selection-end-line="338" selection-end-column="8" />
           <folding />
         </state>
       </provider>
