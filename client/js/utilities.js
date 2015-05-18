@@ -130,6 +130,21 @@
 		document.getElementById("login").addEventListener("click", login.authenticate);
 		document.getElementById("createAcc").addEventListener("click", login.createAccount);
 
+		document.getElementById("displayLogin").addEventListener("click", function(){
+			$("#password2").hide();
+			$("#login").show();
+			$("#createAcc").hide();
+			$("#createAccountTxt").hide();
+			$("#loginTxt").show();
+		});
+		document.getElementById("displayCreateAcc").addEventListener("click", function() {
+			$("#password2").show();
+			$("#login").hide();
+			$("#createAcc").show();
+			$("#loginTxt").hide();
+			$("#createAccountTxt").show();
+		});
+
 		// Shape and Team select listeners
 	    document.getElementById("square").addEventListener("click", function () {
 	        shape = "Square";
