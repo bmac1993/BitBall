@@ -32,18 +32,19 @@ var login = {
     },
     setupSockets: function(){
         socket.on('createAccountSuccess', function (data) {
-            $('#loginSuccess').innerHTML = "Account created!";
+            $('#loginSuccess')[0].innerHTML = "Account created!";
             $('#loginSuccess').show();
         });
         socket.on('createAccountError', function (data) {
-            $('#loginSuccess').innerHTML = "Error: " + data.message;
-            $('#loginSuccess').show();
+            $('#loginError')[0].innerHTML = "Error: " + data.message;
+            $('#loginError').show();
         });
         socket.on('loginSuccess', function (data) {
             alert(data);
         });
         socket.on('loginError', function (data) {
-            alert(data);
+            $('#loginError')[0].innerHTML = "Error: " + data.message;
+            $('#loginError').show();
         });
     }
 };

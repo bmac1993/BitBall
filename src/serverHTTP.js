@@ -316,7 +316,24 @@ var onMsg = function(socket) {
 	});
 
     socket.on('login', function(data) {
-
+        MongoClient.connect(url, function (err, db) {
+            if (err) {
+                console.log('Unable to connect to the mongoDB server. Error:', err);
+            } else {
+                var collection = db.collection('users');
+                collection.findOne({'username':data.username}, function (err, result) {
+                    if (err) {
+                        socket.emit("loginError", err);
+                        //Close connection
+                        db.close();
+                    } else {
+                        socket.emit("loginSuccess", result);
+                        //Close connection
+                        db.close();
+                    }
+                });
+            }
+        });
 
         socket.emit('loginResult', data);
     });
