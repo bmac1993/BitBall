@@ -1,5 +1,6 @@
 var login = {
     authenticated : false,
+    username: "",
     authenticate: function(){
         $('.loginMsg').hide();
         var username = document.getElementById("username").value;
@@ -42,7 +43,7 @@ var login = {
         });
         socket.on('loginSuccess', function (data) {
             gameState = GAME_STATE_TEAM_SELECT;
-            player.name = data.username;
+            this.username = data.username;
             this.authenticated = true;
         });
         socket.on('loginError', function (data) {
