@@ -43,8 +43,7 @@ var login = {
         });
         socket.on('loginSuccess', function (data) {
             gameState = GAME_STATE_TEAM_SELECT;
-            this.username = data.username;
-            this.authenticated = true;
+            user = data.username;
         });
         socket.on('loginError', function (data) {
             $('#loginError')[0].innerHTML = "Error: " + data.message;
