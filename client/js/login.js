@@ -27,7 +27,7 @@ var login = {
         }
         else
         {
-            // return passwords not matching message
+            $('#loginError')[0].innerHTML = "Your passwords did not match";
         }
     },
     setupSockets: function(){

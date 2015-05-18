@@ -327,7 +327,14 @@ var onMsg = function(socket) {
                         //Close connection
                         db.close();
                     } else {
-                        socket.emit("loginSuccess", result);
+                        if(result.password === data.password)
+                        {
+                            socket.emit("loginSuccess", result);
+                        } else {
+                            var error = {};
+                            error.message = "Username and password did not match";
+                            socket.emit("loginError", error);
+                        }
                         //Close connection
                         db.close();
                     }
