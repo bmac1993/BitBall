@@ -156,7 +156,7 @@
             return;
         }
 		
-		if(gameState == GAME_STATE_PLAYING)
+		if(gameState == GAME_STATE_PLAYING && login.authenticated == true)
 		{
 		    //updateGameData();
 		    //checkForCollisions();

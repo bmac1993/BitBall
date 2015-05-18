@@ -27,7 +27,8 @@ var login = {
         }
         else
         {
-            $('#loginError')[0].innerHTML = "Your passwords did not match";
+            $('#loginError')[0].innerHTML = "Your passwords did not match!";
+            $('#loginError').show();
         }
     },
     setupSockets: function(){
@@ -40,7 +41,9 @@ var login = {
             $('#loginError').show();
         });
         socket.on('loginSuccess', function (data) {
-            alert(data);
+            gameState = GAME_STATE_TEAM_SELECT;
+            player.name = data.username;
+            this.authenticated = true;
         });
         socket.on('loginError', function (data) {
             $('#loginError')[0].innerHTML = "Error: " + data.message;
