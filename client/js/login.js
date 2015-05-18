@@ -1,6 +1,7 @@
 var login = {
     authenticated : false,
     authenticate: function(){
+        $('.loginMsg').hide();
         var username = document.getElementById("username").value;
         var password = document.getElementById("password").value;
 
@@ -13,6 +14,7 @@ var login = {
         // throw error message
     },
     createAccount: function(){
+        $('.loginMsg').hide();
         var username = document.getElementById("username").value;
         var password = document.getElementById("password").value;
         var password2 = document.getElementById("password2").value;
@@ -29,10 +31,18 @@ var login = {
         }
     },
     setupSockets: function(){
-        socket.on('createAccountResult', function (data) {
+        socket.on('createAccountSuccess', function (data) {
+            $('#loginSuccess').innerHTML = "Account created!";
+            $('#loginSuccess').show();
+        });
+        socket.on('createAccountError', function (data) {
+            $('#loginSuccess').innerHTML = "Error: " + data.message;
+            $('#loginSuccess').show();
+        });
+        socket.on('loginSuccess', function (data) {
             alert(data);
         });
-        socket.on('loginResult', function (data) {
+        socket.on('loginError', function (data) {
             alert(data);
         });
     }

@@ -83,19 +83,6 @@ var MongoClient = mongodb.MongoClient;
 // Connection URL. This is where your mongodb server is running.
 var url = process.env.MONGOLAB_URI || 'mongodb://localhost/bitballdb';
 
-// Use connect method to connect to the Server
-MongoClient.connect(url, function (err, db) {
-    if (err) {
-        console.log('Unable to connect to the mongoDB server. Error:', err);
-    } else {
-        //HURRAY!! We are connected. :)
-        console.log('Connection established to', url);
-
-        //Close connection
-        db.close();
-    }
-});
-
 //port for the server to listen on. process.env.port and process.env.NODE_PORT are environment variables
 //that can be setup on a server (such as heroku) for non-hard-coded variables.
 //If neither are set (usually local development) then use 3000
@@ -343,14 +330,15 @@ var onMsg = function(socket) {
                 var collection = db.collection('users');
                 collection.insertOne(data, function (err, result) {
                     if (err) {
-                        socket.emit("createAccountResult", err);
+                        socket.emit("createAccountError", err);
+                        //Close connection
+                        db.close();
                     } else {
-                        socket.emit("createAccountResult", result);
+                        socket.emit("createAccountSuccess", result);
+                        //Close connection
+                        db.close();
                     }
                 });
-
-                //Close connection
-                db.close();
             }
         });
 
