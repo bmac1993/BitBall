@@ -334,7 +334,7 @@ var onMsg = function(socket) {
         socket.emit('loginResult', data);
     });
 
-    socket.on('createUser', function(data) {
+    socket.on('createAccount', function(data) {
 
         MongoClient.connect(url, function (err, db) {
             if (err) {
