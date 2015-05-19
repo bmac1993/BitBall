@@ -160,8 +160,8 @@
             drawPauseScreen();
             return;
         }
-		
-		if(gameState == GAME_STATE_PLAYING && login.authenticated == true)
+
+		if(gameState == GAME_STATE_PLAYING)
 		{
 		    //updateGameData();
 		    //checkForCollisions();
