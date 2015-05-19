@@ -133,6 +133,9 @@
 		effectAudio = document.querySelector("#effectAudio"); 
 		effectAudio.volume = 0.2;
 
+        $('.login').show();
+        $('.teamSelect').hide();
+        
         update();
     }
 
@@ -188,11 +191,6 @@
 
     function drawHUD() 
 	{
-        if(gameState == GAME_STATE_SIGN_IN)
-        {
-            $('.login').show();
-            $('.teamSelect').hide();
-        }
 		if(gameState == GAME_STATE_TEAM_SELECT)
 		{
 		    $('.teamSelect').show();
