@@ -131,18 +131,18 @@
 		document.getElementById("createAcc").addEventListener("click", login.createAccount);
 
 		document.getElementById("displayLogin").addEventListener("click", function(){
-			$("#password2")[0].hide();
-			$("#login")[0].show();
-			$("#createAcc")[0].hide();
-			$("#createAccountTxt")[0].hide();
-			$("#loginTxt")[0].show();
+			$('#password2').hide();
+			$('#login').show();
+			$('#createAcc').hide();
+			$('#createAccountTxt').hide();
+			$('#loginTxt').show();
 		});
 		document.getElementById("displayCreateAcc").addEventListener("click", function() {
-			$("#password2")[0].show();
-			$("#login")[0].hide();
-			$("#createAcc")[0].show();
-			$("#loginTxt")[0].hide();
-			$("#createAccountTxt")[0].show();
+			$('#password2').show();
+			$('#login').hide();
+			$('#createAcc').show();
+			$('#loginTxt').hide();
+			$('#createAccountTxt').show();
 		});
 
 		// Shape and Team select listeners
