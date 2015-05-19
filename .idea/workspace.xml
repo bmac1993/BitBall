@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="085ed049-ee30-4939-b495-c7479a4c0e1a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/client.html" afterPath="$PROJECT_DIR$/client/client.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/js/main.js" afterPath="$PROJECT_DIR$/client/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/js/utilities.js" afterPath="$PROJECT_DIR$/client/js/utilities.js" />
     </list>
     <ignored path="BitBall.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="client.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="client.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/client.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.1836734">
-              <caret line="31" column="95" selection-start-line="31" selection-start-column="95" selection-end-line="31" selection-end-column="95" />
+            <state vertical-scroll-proportion="0.30274135">
+              <caret line="31" column="80" selection-start-line="31" selection-start-column="80" selection-end-line="31" selection-end-column="80" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -68,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.85365856">
-              <caret line="142" column="8" selection-start-line="142" selection-start-column="8" selection-end-line="142" selection-end-column="8" />
+            <state vertical-scroll-proportion="-23.88889">
+              <caret line="136" column="32" selection-start-line="136" selection-start-column="32" selection-end-line="136" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -101,8 +103,8 @@
       <file leaf-file-name="utilities.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/js/utilities.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.8">
-              <caret line="140" column="12" selection-start-line="140" selection-start-column="12" selection-end-line="144" selection-end-column="42" />
+            <state vertical-scroll-proportion="-17.4">
+              <caret line="146" column="38" selection-start-line="146" selection-start-column="38" selection-end-line="146" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -125,9 +127,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/serverHTTP.js" />
         <option value="$PROJECT_DIR$/client/js/login.js" />
-        <option value="$PROJECT_DIR$/client/client.html" />
         <option value="$PROJECT_DIR$/client/js/utilities.js" />
         <option value="$PROJECT_DIR$/client/js/main.js" />
+        <option value="$PROJECT_DIR$/client/client.html" />
       </list>
     </option>
   </component>
@@ -343,10 +345,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/js/player.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/js/utilities.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.4">
+          <caret line="146" column="38" selection-start-line="146" selection-start-column="38" selection-end-line="146" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.88889">
+          <caret line="136" column="32" selection-start-line="136" selection-start-column="32" selection-end-line="136" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/client.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.1836734">
-          <caret line="31" column="95" selection-start-line="31" selection-start-column="95" selection-end-line="31" selection-end-column="95" />
+        <state vertical-scroll-proportion="0.30274135">
+          <caret line="31" column="80" selection-start-line="31" selection-start-column="80" selection-end-line="31" selection-end-column="80" />
           <folding>
             <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -373,38 +407,6 @@
             <element signature="n#style#0;n#img#5;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#5;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/js/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/js/player.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/js/utilities.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.8">
-          <caret line="140" column="12" selection-start-line="140" selection-start-column="12" selection-end-line="144" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.85365856">
-          <caret line="142" column="8" selection-start-line="142" selection-start-column="8" selection-end-line="142" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>

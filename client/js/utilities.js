@@ -136,6 +136,7 @@
 			$('#createAcc').hide();
 			$('#createAccountTxt').hide();
 			$('#loginTxt').show();
+			$('#password2txt').hide();
 		});
 		document.getElementById("displayCreateAcc").addEventListener("click", function() {
 			$('#password2').show();
@@ -143,6 +144,7 @@
 			$('#createAcc').show();
 			$('#loginTxt').hide();
 			$('#createAccountTxt').show();
+			$('#password2txt').show();
 		});
 
 		// Shape and Team select listeners

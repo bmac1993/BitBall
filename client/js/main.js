@@ -135,12 +135,9 @@
 
         $('.login').show();
         $('.teamSelect').hide();
-        $('#password2').show();
         $('#login').hide();
-        $('#createAcc').show();
         $('#loginTxt').hide();
-        $('#createAccountTxt').show();
-        
+
         update();
     }
 
